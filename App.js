@@ -11,21 +11,9 @@ export default class App extends React.Component {
   render() {
     return (
 
-        <Naviago_Map  style = {styles.container}/>
+        <Naviago_Map markers ={[]} />
 
     );
   }
 }
 
-
-
-const styles = StyleSheet.create({
-  container: {
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-
-  },
-});

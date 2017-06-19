@@ -12,7 +12,7 @@ var Login = React.createClass({
             userName: 'testuser',
             password: 'sldkfjsdlfkj'
         });
-    }
+    },
 
     render() {
     return(     
@@ -32,8 +32,8 @@ var Login = React.createClass({
                   image:"./Flag-1.png",
                   anchor: { x: 0, y: 1, },
                   key : 11111111  
-                }],
-        }        
+                }]
+      }
             
             <MapView
               style = {{

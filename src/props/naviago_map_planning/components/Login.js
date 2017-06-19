@@ -1,19 +1,22 @@
-import React from 'react';
-import StyleSheet from 'react-native';
-import MapView from 'react-native-maps';
+var React = require("react-native");
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux/native';
+import * as Actions from '../actions';
 
+function mapStateToProps(state) { return { user: state.userReducers.user }; }
+function mapDispatchToProps(dispatch) { return bindActionCreators(Actions, dispatch); }
 
+var Login = React.createClass({
+    onMapNeedUpdate(){
+        this.props.login({
+            userName: 'testuser',
+            password: 'sldkfjsdlfkj'
+        });
+    }
 
-export default class Naviago_Map extends React.Component {
-
-
-onRegionChange(region) {
-  this.setState({ region });
-}
-
-constructor(props){
-  super(props);
-  this.state = {
+    render() {
+    return(     
+      this.state = {
                 markers: [{
                   title: 'hello',
                   coordinates: {
@@ -30,19 +33,9 @@ constructor(props){
                   anchor: { x: 0, y: 1, },
                   key : 11111111  
                 }],
-              }
-
-}
-
-
-_updateMaps(){
-
-}
-
-
-  render() {
-    return (
-          <MapView
+        }        
+            
+            <MapView
               style = {{
                     position: 'absolute',
                     top: 0,
@@ -70,7 +63,8 @@ _updateMaps(){
                     />
                 ))}
             </MapView>
-    );
-  }
-}
+       )
+    }
+});
 
+export default connect(mapStateToProps, mapDispatchToProps)(Login);

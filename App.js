@@ -1,19 +1,29 @@
 import React from 'react';
-import { StyleSheet, Text, View, Dimensions } from 'react-native';
+import { StyleSheet, Text, View, Dimensions, AppRegistry } from 'react-native';
+var Login = require('./src/props/naviago_map_planning/components/Login')
+//import Naviago_Map from "./src/props/naviago_map_planning/naviago_map_planning.js"
+var userReducers = require('./src/props/naviago_map_planning/reducers/user')
+import {createStore, combineReducers } from 'redux';
+import {Provider} from 'react-redux';
 
-import Naviago_Map from "./src/props/naviago_map_planning/naviago_map_planning.js"
+let store = createStore(combineReducers({userReducers}));
 
+class App extends React.Component {
+  render(){
+    return(
+      <Login markers ={[]} />
+    )
+  }
+}
 
-var width_Full = Dimensions.get('window').width; //full width
-var height_Full = Dimensions.get('window').height; //full height
-
-export default class App extends React.Component {
+class MyApp extends React.Component {
   render() {
     return (
-
-        <Naviago_Map markers ={[]} />
-
+      <Provider store={store}>
+        {()=><App/>}
+      </Provider>
     );
   }
 }
 
+AppRegistry.registerComponent('MyApp',()=> MyApp);

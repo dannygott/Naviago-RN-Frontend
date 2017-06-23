@@ -1,45 +1,25 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = undefined;
 var _jsxFileName = '/mnt/c/Users/Daniel/Naviago-RN-Frontend/App.js';
 
 var _react = require('react');
 
 var _react2 = babelHelpers.interopRequireDefault(_react);
 
-var _reactNative = require('react-native');
+var _app = require('./src/props/naviago_map_planning/containers/app');
 
-var _redux = require('redux');
+var _app2 = babelHelpers.interopRequireDefault(_app);
 
-var _reactRedux = require('react-redux');
+var _counter = require('./src/props/naviago_map_planning/components/counter.js');
 
-var Login = require('./src/props/naviago_map_planning/components/Login');
+var _counter2 = babelHelpers.interopRequireDefault(_counter);
 
-var userReducers = require('./src/props/naviago_map_planning/reducers/user');
-
-
-var store = (0, _redux.createStore)((0, _redux.combineReducers)({ userReducers: userReducers }));
-
-var App = function (_React$Component) {
-  babelHelpers.inherits(App, _React$Component);
-
-  function App() {
-    babelHelpers.classCallCheck(this, App);
-    return babelHelpers.possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
-  }
-
-  babelHelpers.createClass(App, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(Login, { markers: [], __source: {
-          fileName: _jsxFileName,
-          lineNumber: 14
-        }
-      });
-    }
-  }]);
-  return App;
-}(_react2.default.Component);
-
-var MyApp = function (_React$Component2) {
-  babelHelpers.inherits(MyApp, _React$Component2);
+var MyApp = function (_Component) {
+  babelHelpers.inherits(MyApp, _Component);
 
   function MyApp() {
     babelHelpers.classCallCheck(this, MyApp);
@@ -49,27 +29,15 @@ var MyApp = function (_React$Component2) {
   babelHelpers.createClass(MyApp, [{
     key: 'render',
     value: function render() {
-      return _react2.default.createElement(
-        _reactRedux.Provider,
-        { store: store, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 22
-          }
-        },
-        function () {
-          return _react2.default.createElement(App, {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 23
-            }
-          });
+      return _react2.default.createElement(_counter2.default, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 12
         }
-      );
+      });
     }
   }]);
   return MyApp;
-}(_react2.default.Component);
+}(_react.Component);
 
-_reactNative.AppRegistry.registerComponent('MyApp', function () {
-  return MyApp;
-});
+exports.default = MyApp;

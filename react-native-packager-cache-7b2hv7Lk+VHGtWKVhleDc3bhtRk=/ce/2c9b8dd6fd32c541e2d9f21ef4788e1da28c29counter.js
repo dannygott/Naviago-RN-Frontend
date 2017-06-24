@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = counter;
 
-var _actionTypes = require('../actions/actionTypes');
+var _actionTypes = require("../actions/actionTypes");
 
 var types = babelHelpers.interopRequireWildcard(_actionTypes);
 
@@ -21,6 +21,7 @@ function counter() {
       return babelHelpers.extends({}, state, {
         count: state.count + 1
       });
+      console.log("dsf");
     case types.DECREMENT:
       return babelHelpers.extends({}, state, {
         count: state.count - 1

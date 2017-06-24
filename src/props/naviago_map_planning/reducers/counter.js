@@ -11,6 +11,7 @@ export default function counter(state = initialState, action = {}) {
         ...state,
         count: state.count + 1
       };
+      console.log("dsf");
     case types.DECREMENT:
       return {
         ...state,

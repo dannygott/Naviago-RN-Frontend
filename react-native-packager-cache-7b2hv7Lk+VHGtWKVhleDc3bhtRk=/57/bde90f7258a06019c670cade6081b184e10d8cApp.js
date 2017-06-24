@@ -14,10 +14,6 @@ var _app = require('./src/props/naviago_map_planning/containers/app');
 
 var _app2 = babelHelpers.interopRequireDefault(_app);
 
-var _counter = require('./src/props/naviago_map_planning/components/counter.js');
-
-var _counter2 = babelHelpers.interopRequireDefault(_counter);
-
 var MyApp = function (_Component) {
   babelHelpers.inherits(MyApp, _Component);
 
@@ -29,10 +25,10 @@ var MyApp = function (_Component) {
   babelHelpers.createClass(MyApp, [{
     key: 'render',
     value: function render() {
-      return _react2.default.createElement(_counter2.default, {
+      return _react2.default.createElement(_app2.default, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 12
+          lineNumber: 11
         }
       });
     }

@@ -14,12 +14,39 @@ const styles = StyleSheet.create({
   }
 });
 
+
+
 export default class Counter extends Component {
-  constructor(props) {
-    super(props);
-      this.state = {
+      constructor(props) {
+        super(props);
+          this.state = {
+                    markers: [{
+                      title: "hello",
+                      coordinates: {
+                        latitude: 3.148561,
+                        longitude: 101.652778,},
+                      key: 22222222222222
+                    },
+                    {
+                      title: 'hello',
+                      coordinates: {
+                        latitude: 3.149771,
+                        longitude: 101.655449 },
+                      image:"./Flag-1.png",
+                      anchor: { x: 0, y: 1, },
+                      key : 11111111  
+                    }],
+                  }
+        
+
+      }
+    
+    _updateMaps(){
+      console.log("yaaaa");
+      this.setState(
+        {
                 markers: [{
-                  title: 'hello',
+                  title: "CUNT",
                   coordinates: {
                     latitude: 3.148561,
                     longitude: 101.652778,},
@@ -35,7 +62,16 @@ export default class Counter extends Component {
                   key : 11111111  
                 }],
               }
-  }
+
+
+      )
+
+    }
+
+
+
+
+
 
   render() {
     const { counter, increment, decrement } = this.props;

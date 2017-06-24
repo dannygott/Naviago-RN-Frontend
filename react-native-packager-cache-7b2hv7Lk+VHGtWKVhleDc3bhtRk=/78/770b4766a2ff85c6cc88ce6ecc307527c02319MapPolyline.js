@@ -18,6 +18,8 @@ var propTypes = babelHelpers.extends({}, _reactNative.View.propTypes, {
 
   onPress: _react.PropTypes.func,
 
+  tappable: _react.PropTypes.bool,
+
   fillColor: _react.PropTypes.string,
 
   strokeWidth: _react.PropTypes.number,
@@ -67,7 +69,7 @@ var MapPolyline = function (_React$Component) {
           _this2.polyline = _ref;
         }, __source: {
           fileName: _jsxFileName,
-          lineNumber: 140
+          lineNumber: 145
         }
       }));
     }

@@ -28,7 +28,7 @@ var MyApp = function (_Component) {
       return _react2.default.createElement(_app2.default, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 11
+          lineNumber: 10
         }
       });
     }

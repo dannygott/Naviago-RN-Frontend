@@ -10,6 +10,10 @@ var _react2 = babelHelpers.interopRequireDefault(_react);
 
 var _reactNative = require('react-native');
 
+var _reactNativeMaps = require('react-native-maps');
+
+var _reactNativeMaps2 = babelHelpers.interopRequireDefault(_reactNativeMaps);
+
 var styles = _reactNative.StyleSheet.create({
   button: {
     width: 100,
@@ -27,7 +31,27 @@ var Counter = function (_Component) {
 
   function Counter(props) {
     babelHelpers.classCallCheck(this, Counter);
-    return babelHelpers.possibleConstructorReturn(this, (Counter.__proto__ || Object.getPrototypeOf(Counter)).call(this, props));
+
+    var _this = babelHelpers.possibleConstructorReturn(this, (Counter.__proto__ || Object.getPrototypeOf(Counter)).call(this, props));
+
+    _this.state = {
+      markers: [{
+        title: 'hello',
+        coordinates: {
+          latitude: 3.148561,
+          longitude: 101.652778 },
+        key: 22222222222222
+      }, {
+        title: 'hello',
+        coordinates: {
+          latitude: 3.149771,
+          longitude: 101.655449 },
+        image: "./Flag-1.png",
+        anchor: { x: 0, y: 1 },
+        key: 11111111
+      }]
+    };
+    return _this;
   }
 
   babelHelpers.createClass(Counter, [{
@@ -43,15 +67,52 @@ var Counter = function (_Component) {
         _reactNative.View,
         { style: { flex: 1, alignItems: 'center', justifyContent: 'center' }, __source: {
             fileName: _jsxFileName,
-            lineNumber: 25
+            lineNumber: 45
           }
         },
+        _react2.default.createElement(
+          _reactNativeMaps2.default,
+          {
+            style: {
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0
+
+            },
+            initialRegion: {
+              latitude: 37.78825,
+              longitude: -122.4324,
+              latitudeDelta: 0.0922,
+              longitudeDelta: 0.0421
+            },
+            onRegionChangeComplete: this._updateMaps,
+
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 46
+            }
+          },
+          this.state.markers.map(function (marker) {
+            return _react2.default.createElement(_reactNativeMaps2.default.Marker, {
+              image: require("./Flag-1.png"),
+              coordinate: marker.coordinates,
+              title: marker.title,
+              anchor: marker.anchor,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 66
+              }
+            });
+          })
+        ),
         _react2.default.createElement(
           _reactNative.Text,
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 26
+              lineNumber: 75
             }
           },
           counter
@@ -60,7 +121,7 @@ var Counter = function (_Component) {
           _reactNative.TouchableOpacity,
           { onPress: increment, style: styles.button, __source: {
               fileName: _jsxFileName,
-              lineNumber: 27
+              lineNumber: 76
             }
           },
           _react2.default.createElement(
@@ -68,7 +129,7 @@ var Counter = function (_Component) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 28
+                lineNumber: 77
               }
             },
             'up'
@@ -78,7 +139,7 @@ var Counter = function (_Component) {
           _reactNative.TouchableOpacity,
           { onPress: decrement, style: styles.button, __source: {
               fileName: _jsxFileName,
-              lineNumber: 30
+              lineNumber: 79
             }
           },
           _react2.default.createElement(
@@ -86,7 +147,7 @@ var Counter = function (_Component) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 31
+                lineNumber: 80
               }
             },
             'down'

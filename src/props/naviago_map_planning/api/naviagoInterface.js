@@ -1,10 +1,18 @@
-export default locationsPull(){
+
+export default function locationsPull(){
+    var jaundice = {jigglepuff : "cute"}
+    return jaundice.jigglepuff
+
+
+
+  /*
     fetch('https://facebook.github.io/react-native/movies.json')
-      .then((response) => response.json())
-      .then((responseJson) => {
-        return responseJson.movies;
-      })
+      .then(function(response) {
+          return response.movies.json()
+       })
       .catch((error) => {
         console.error(error);
       });
+
+*/
 }

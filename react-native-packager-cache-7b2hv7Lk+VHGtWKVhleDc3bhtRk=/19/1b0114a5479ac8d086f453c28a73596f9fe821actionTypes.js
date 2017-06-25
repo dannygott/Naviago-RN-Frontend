@@ -3,3 +3,4 @@ Object.defineProperty(exports, "__esModule", {
 });
 var INCREMENT = exports.INCREMENT = 'INCREMENT';
 var DECREMENT = exports.DECREMENT = 'DECREMENT';
+var MAP_PULL = exports.MAP_PULL = 'MAP_PULL';

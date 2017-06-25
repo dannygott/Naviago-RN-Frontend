@@ -58,10 +58,10 @@ var Counter = function (_Component) {
   babelHelpers.createClass(Counter, [{
     key: '_updateMaps',
     value: function _updateMaps() {
-      console.log("yaaaa");
+      console.log(this.props.locations);
       this.setState({
         markers: [{
-          title: "CUNT",
+          title: this.props.locations,
           coordinates: {
             latitude: 3.148561,
             longitude: 101.652778 },
@@ -83,14 +83,15 @@ var Counter = function (_Component) {
       var _props = this.props,
           counter = _props.counter,
           increment = _props.increment,
-          decrement = _props.decrement;
-
+          decrement = _props.decrement,
+          map_pull = _props.map_pull,
+          locations = _props.locations;
 
       return _react2.default.createElement(
         _reactNative.View,
         { style: { flex: 1, alignItems: 'center', justifyContent: 'center' }, __source: {
             fileName: _jsxFileName,
-            lineNumber: 81
+            lineNumber: 76
           }
         },
         _react2.default.createElement(
@@ -114,7 +115,7 @@ var Counter = function (_Component) {
 
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 82
+              lineNumber: 77
             }
           },
           this.state.markers.map(function (marker) {
@@ -125,7 +126,7 @@ var Counter = function (_Component) {
               anchor: marker.anchor,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 102
+                lineNumber: 97
               }
             });
           })
@@ -135,7 +136,7 @@ var Counter = function (_Component) {
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 111
+              lineNumber: 110
             }
           },
           counter
@@ -144,7 +145,7 @@ var Counter = function (_Component) {
           _reactNative.TouchableOpacity,
           { onPress: increment, style: styles.button, __source: {
               fileName: _jsxFileName,
-              lineNumber: 112
+              lineNumber: 111
             }
           },
           _react2.default.createElement(
@@ -152,7 +153,7 @@ var Counter = function (_Component) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 113
+                lineNumber: 112
               }
             },
             'up'
@@ -162,7 +163,7 @@ var Counter = function (_Component) {
           _reactNative.TouchableOpacity,
           { onPress: decrement, style: styles.button, __source: {
               fileName: _jsxFileName,
-              lineNumber: 115
+              lineNumber: 114
             }
           },
           _react2.default.createElement(
@@ -170,10 +171,28 @@ var Counter = function (_Component) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 116
+                lineNumber: 115
               }
             },
             'down'
+          )
+        ),
+        _react2.default.createElement(
+          _reactNative.TouchableOpacity,
+          { onPress: map_pull, style: styles.button, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 117
+            }
+          },
+          _react2.default.createElement(
+            _reactNative.Text,
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 118
+              }
+            },
+            'UPDATE MAP'
           )
         )
       );

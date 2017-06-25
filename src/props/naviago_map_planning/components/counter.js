@@ -42,11 +42,11 @@ export default class Counter extends Component {
       }
     
     _updateMaps(){
-      console.log("yaaaa");
+      console.log(this.props.locations);
       this.setState(
         {
                 markers: [{
-                  title: "CUNT",
+                  title: this.props.locations,
                   coordinates: {
                     latitude: 3.148561,
                     longitude: 101.652778,},
@@ -69,12 +69,8 @@ export default class Counter extends Component {
     }
 
 
-
-
-
-
   render() {
-    const { counter, increment, decrement } = this.props;
+    const { counter, increment, decrement, map_pull, locations } = this.props;
     return (
 
       <View style={{flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -117,6 +113,9 @@ export default class Counter extends Component {
         </TouchableOpacity>
         <TouchableOpacity onPress={decrement} style={styles.button}>
           <Text>down</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={map_pull} style={styles.button}>
+          <Text>UPDATE MAP</Text>
         </TouchableOpacity>
       </View>
     );

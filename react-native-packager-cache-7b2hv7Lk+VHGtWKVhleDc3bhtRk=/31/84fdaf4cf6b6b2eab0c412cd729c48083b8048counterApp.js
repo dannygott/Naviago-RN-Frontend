@@ -37,7 +37,8 @@ var CounterApp = function (_Component) {
           actions = _props.actions;
 
       return _react2.default.createElement(_counter2.default, babelHelpers.extends({
-        counter: state.count
+        counter: state.count,
+        locations: state.locations
       }, actions, {
         __source: {
           fileName: _jsxFileName,

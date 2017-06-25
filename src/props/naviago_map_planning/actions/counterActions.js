@@ -1,5 +1,5 @@
 import * as types from './actionTypes';
-import * as API from '../api/naviagoInterface'
+import locationsPull from '../api/naviagoInterface'
 
 export function increment() {
   return {
@@ -12,10 +12,11 @@ export function decrement() {
     type: types.DECREMENT
   };
 }
-export function mapPull() {
-  
+export function map_pull() {
+  jaun = locationsPull()
+  console.log(jaun)
   return {
     type : types.MAP_PULL,
-    locations : API.locationsPull()
+    locations : locationsPull()
   }
 }

@@ -1,7 +1,8 @@
 import * as types from '../actions/actionTypes';
 
 const initialState = {
-  count: 0
+  count: 0,
+  locations : "cuterthanu"
 };
 
 export default function counter(state = initialState, action = {}) {
@@ -17,8 +18,11 @@ export default function counter(state = initialState, action = {}) {
         count: state.count - 1
       };
     case types.MAP_PULL:
+    return{
         ...state,
-
+        count: state.count - 100,
+        locations : state.locations
+      };
     default:
       return state;
   }

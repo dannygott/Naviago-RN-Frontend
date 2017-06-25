@@ -9,7 +9,8 @@ var types = babelHelpers.interopRequireWildcard(_actionTypes);
 
 
 var initialState = {
-  count: 0
+  count: 0,
+  locations: "cuterthanu"
 };
 
 function counter() {
@@ -21,10 +22,14 @@ function counter() {
       return babelHelpers.extends({}, state, {
         count: state.count + 1
       });
-      console.log("dsf");
     case types.DECREMENT:
       return babelHelpers.extends({}, state, {
         count: state.count - 1
+      });
+    case types.MAP_PULL:
+      return babelHelpers.extends({}, state, {
+        count: state.count - 100,
+        locations: state.locations
       });
     default:
       return state;

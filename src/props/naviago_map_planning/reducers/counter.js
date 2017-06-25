@@ -11,12 +11,14 @@ export default function counter(state = initialState, action = {}) {
         ...state,
         count: state.count + 1
       };
-      console.log("dsf");
     case types.DECREMENT:
       return {
         ...state,
         count: state.count - 1
       };
+    case types.MAP_PULL:
+        ...state,
+
     default:
       return state;
   }

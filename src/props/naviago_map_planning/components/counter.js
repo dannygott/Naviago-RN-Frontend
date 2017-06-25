@@ -75,7 +75,6 @@ export default class Counter extends Component {
 
   render() {
     const { counter, increment, decrement } = this.props;
-
     return (
 
       <View style={{flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -94,7 +93,7 @@ export default class Counter extends Component {
                 latitudeDelta: 0.0922,
                 longitudeDelta: 0.0421,
           }}
-          onRegionChangeComplete = {this._updateMaps}
+          onRegionChangeComplete = {this._updateMaps.bind(this)}
 
         >
 
@@ -107,6 +106,10 @@ export default class Counter extends Component {
                 />
             ))}
       </MapView>
+
+
+
+
 
         <Text>{counter}</Text>
         <TouchableOpacity onPress={increment} style={styles.button}>

@@ -110,7 +110,7 @@ var Counter = function (_Component) {
               latitudeDelta: 0.0922,
               longitudeDelta: 0.0421
             },
-            onRegionChangeComplete: this._updateMaps,
+            onRegionChangeComplete: this._updateMaps.bind(this),
 
             __source: {
               fileName: _jsxFileName,

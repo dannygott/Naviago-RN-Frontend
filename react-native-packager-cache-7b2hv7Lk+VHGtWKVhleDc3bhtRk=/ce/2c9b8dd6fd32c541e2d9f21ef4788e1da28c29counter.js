@@ -3,14 +3,32 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = counter;
 
-var _actionTypes = require("../actions/actionTypes");
+var _actionTypes = require('../actions/actionTypes');
 
 var types = babelHelpers.interopRequireWildcard(_actionTypes);
 
+var _naviagoInterface = require('../api/naviagoInterface');
+
+var _naviagoInterface2 = babelHelpers.interopRequireDefault(_naviagoInterface);
 
 var initialState = {
   count: 0,
-  locations: "cuterthanu"
+  locations: { markers: [{
+      title: "hello",
+      coordinates: {
+        latitude: 3.148561,
+        longitude: 101.652778 },
+      key: 22222222222222
+    }, {
+      title: 'hello',
+      coordinates: {
+        latitude: 3.149771,
+        longitude: 101.655449 },
+      image: "./Flag-1.png",
+      anchor: { x: 0, y: 1 },
+      key: 11111111
+    }]
+  }
 };
 
 function counter() {
@@ -29,7 +47,7 @@ function counter() {
     case types.MAP_PULL:
       return babelHelpers.extends({}, state, {
         count: state.count - 100,
-        locations: state.locations
+        locations: (0, _naviagoInterface2.default)()
       });
     default:
       return state;

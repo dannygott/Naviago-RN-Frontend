@@ -66,5 +66,4 @@ var styles = _reactNative.StyleSheet.create({
     color: "white",
     fontSize: 20
   }
-
 });

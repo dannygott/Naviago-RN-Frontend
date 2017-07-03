@@ -20,6 +20,10 @@ var _search = require('./src/props/naviago_map_planning/components/search');
 
 var _search2 = babelHelpers.interopRequireDefault(_search);
 
+var _login = require('./src/props/naviago_map_planning/components/login');
+
+var _login2 = babelHelpers.interopRequireDefault(_login);
+
 var MyApp = function (_Component) {
   babelHelpers.inherits(MyApp, _Component);
 
@@ -35,19 +39,19 @@ var MyApp = function (_Component) {
         _reactNative.View,
         { style: { flex: 1 }, __source: {
             fileName: _jsxFileName,
-            lineNumber: 12
+            lineNumber: 13
           }
         },
         _react2.default.createElement(_app2.default, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 13
+            lineNumber: 14
           }
         }),
         _react2.default.createElement(_search2.default, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 14
+            lineNumber: 15
           }
         })
       );

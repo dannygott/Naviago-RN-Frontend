@@ -51,7 +51,6 @@ var Counter = function (_Component) {
         key: 11111111
       }]
     };
-
     return _this;
   }
 
@@ -76,7 +75,7 @@ var Counter = function (_Component) {
         _reactNative.View,
         { style: { flex: 1, alignItems: 'center', justifyContent: 'center' }, __source: {
             fileName: _jsxFileName,
-            lineNumber: 55
+            lineNumber: 51
           }
         },
         _react2.default.createElement(
@@ -100,7 +99,7 @@ var Counter = function (_Component) {
 
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 56
+              lineNumber: 54
             }
           },
           this.state.markers.map(function (marker) {
@@ -111,7 +110,7 @@ var Counter = function (_Component) {
               anchor: marker.anchor,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 76
+                lineNumber: 74
               }
             });
           })
@@ -121,7 +120,7 @@ var Counter = function (_Component) {
           {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 89
+              lineNumber: 93
             }
           },
           counter
@@ -130,7 +129,7 @@ var Counter = function (_Component) {
           _reactNative.TouchableOpacity,
           { onPress: increment, style: styles.button, __source: {
               fileName: _jsxFileName,
-              lineNumber: 90
+              lineNumber: 94
             }
           },
           _react2.default.createElement(
@@ -138,7 +137,7 @@ var Counter = function (_Component) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 91
+                lineNumber: 95
               }
             },
             'up'
@@ -148,7 +147,7 @@ var Counter = function (_Component) {
           _reactNative.TouchableOpacity,
           { onPress: decrement, style: styles.button, __source: {
               fileName: _jsxFileName,
-              lineNumber: 93
+              lineNumber: 97
             }
           },
           _react2.default.createElement(
@@ -156,7 +155,7 @@ var Counter = function (_Component) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 94
+                lineNumber: 98
               }
             },
             'down'
@@ -166,7 +165,7 @@ var Counter = function (_Component) {
           _reactNative.TouchableOpacity,
           { onPress: map_pull, style: styles.button, __source: {
               fileName: _jsxFileName,
-              lineNumber: 96
+              lineNumber: 100
             }
           },
           _react2.default.createElement(
@@ -174,7 +173,7 @@ var Counter = function (_Component) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 97
+                lineNumber: 101
               }
             },
             'UPDATE MAP'

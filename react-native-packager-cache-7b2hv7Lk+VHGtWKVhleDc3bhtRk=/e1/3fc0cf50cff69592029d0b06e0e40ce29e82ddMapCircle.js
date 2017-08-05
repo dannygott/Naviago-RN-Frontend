@@ -1,5 +1,9 @@
 var _jsxFileName = '/mnt/c/Users/Daniel/Naviago-RN-Frontend/node_modules/react-native-maps/lib/components/MapCircle.js';
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
+
 var _react = require('react');
 
 var _react2 = babelHelpers.interopRequireDefault(_react);
@@ -10,33 +14,33 @@ var _decorateMapComponent = require('./decorateMapComponent');
 
 var _decorateMapComponent2 = babelHelpers.interopRequireDefault(_decorateMapComponent);
 
-var propTypes = babelHelpers.extends({}, _reactNative.View.propTypes, {
-  center: _react.PropTypes.shape({
-    latitude: _react.PropTypes.number.isRequired,
-    longitude: _react.PropTypes.number.isRequired
+var propTypes = babelHelpers.extends({}, _reactNative.ViewPropTypes, {
+  center: _propTypes2.default.shape({
+    latitude: _propTypes2.default.number.isRequired,
+    longitude: _propTypes2.default.number.isRequired
   }).isRequired,
 
-  radius: _react.PropTypes.number.isRequired,
+  radius: _propTypes2.default.number.isRequired,
 
-  onPress: _react.PropTypes.func,
+  onPress: _propTypes2.default.func,
 
-  strokeWidth: _react.PropTypes.number,
+  strokeWidth: _propTypes2.default.number,
 
-  strokeColor: _react.PropTypes.string,
+  strokeColor: _propTypes2.default.string,
 
-  fillColor: _react.PropTypes.string,
+  fillColor: _propTypes2.default.string,
 
-  zIndex: _react.PropTypes.number,
+  zIndex: _propTypes2.default.number,
 
-  lineCap: _react.PropTypes.oneOf(['butt', 'round', 'square']),
+  lineCap: _propTypes2.default.oneOf(['butt', 'round', 'square']),
 
-  lineJoin: _react.PropTypes.oneOf(['miter', 'round', 'bevel']),
+  lineJoin: _propTypes2.default.oneOf(['miter', 'round', 'bevel']),
 
-  miterLimit: _react.PropTypes.number,
+  miterLimit: _propTypes2.default.number,
 
-  lineDashPhase: _react.PropTypes.number,
+  lineDashPhase: _propTypes2.default.number,
 
-  lineDashPattern: _react.PropTypes.arrayOf(_react.PropTypes.number)
+  lineDashPattern: _propTypes2.default.arrayOf(_propTypes2.default.number)
 });
 
 var defaultProps = {
@@ -67,7 +71,7 @@ var MapCircle = function (_React$Component) {
           _this2.circle = _ref;
         }, __source: {
           fileName: _jsxFileName,
-          lineNumber: 135
+          lineNumber: 136
         }
       }));
     }

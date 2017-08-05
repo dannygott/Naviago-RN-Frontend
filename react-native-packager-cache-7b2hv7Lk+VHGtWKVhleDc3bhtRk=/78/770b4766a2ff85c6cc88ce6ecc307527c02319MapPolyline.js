@@ -1,5 +1,9 @@
 var _jsxFileName = '/mnt/c/Users/Daniel/Naviago-RN-Frontend/node_modules/react-native-maps/lib/components/MapPolyline.js';
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
+
 var _react = require('react');
 
 var _react2 = babelHelpers.interopRequireDefault(_react);
@@ -10,35 +14,35 @@ var _decorateMapComponent = require('./decorateMapComponent');
 
 var _decorateMapComponent2 = babelHelpers.interopRequireDefault(_decorateMapComponent);
 
-var propTypes = babelHelpers.extends({}, _reactNative.View.propTypes, {
-  coordinates: _react.PropTypes.arrayOf(_react.PropTypes.shape({
-    latitude: _react.PropTypes.number.isRequired,
-    longitude: _react.PropTypes.number.isRequired
+var propTypes = babelHelpers.extends({}, _reactNative.ViewPropTypes, {
+  coordinates: _propTypes2.default.arrayOf(_propTypes2.default.shape({
+    latitude: _propTypes2.default.number.isRequired,
+    longitude: _propTypes2.default.number.isRequired
   })),
 
-  onPress: _react.PropTypes.func,
+  onPress: _propTypes2.default.func,
 
-  tappable: _react.PropTypes.bool,
+  tappable: _propTypes2.default.bool,
 
-  fillColor: _react.PropTypes.string,
+  fillColor: _propTypes2.default.string,
 
-  strokeWidth: _react.PropTypes.number,
+  strokeWidth: _propTypes2.default.number,
 
-  strokeColor: _react.PropTypes.string,
+  strokeColor: _propTypes2.default.string,
 
-  zIndex: _react.PropTypes.number,
+  zIndex: _propTypes2.default.number,
 
-  lineCap: _react.PropTypes.oneOf(['butt', 'round', 'square']),
+  lineCap: _propTypes2.default.oneOf(['butt', 'round', 'square']),
 
-  lineJoin: _react.PropTypes.oneOf(['miter', 'round', 'bevel']),
+  lineJoin: _propTypes2.default.oneOf(['miter', 'round', 'bevel']),
 
-  miterLimit: _react.PropTypes.number,
+  miterLimit: _propTypes2.default.number,
 
-  geodesic: _react.PropTypes.bool,
+  geodesic: _propTypes2.default.bool,
 
-  lineDashPhase: _react.PropTypes.number,
+  lineDashPhase: _propTypes2.default.number,
 
-  lineDashPattern: _react.PropTypes.arrayOf(_react.PropTypes.number)
+  lineDashPattern: _propTypes2.default.arrayOf(_propTypes2.default.number)
 });
 
 var defaultProps = {
@@ -69,7 +73,7 @@ var MapPolyline = function (_React$Component) {
           _this2.polyline = _ref;
         }, __source: {
           fileName: _jsxFileName,
-          lineNumber: 145
+          lineNumber: 146
         }
       }));
     }

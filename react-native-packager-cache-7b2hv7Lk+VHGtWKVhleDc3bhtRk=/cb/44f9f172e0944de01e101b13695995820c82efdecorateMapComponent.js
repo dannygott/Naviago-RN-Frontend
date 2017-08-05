@@ -5,7 +5,9 @@ exports.googleMapIsInstalled = exports.createNotSupportedComponent = exports.con
 exports.getAirMapName = getAirMapName;
 exports.default = decorateMapComponent;
 
-var _react = require('react');
+var _propTypes = require('prop-types');
+
+var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
 
 var _reactNative = require('react-native');
 
@@ -26,7 +28,7 @@ function getAirComponentName(provider, component) {
 }
 
 var contextTypes = exports.contextTypes = {
-  provider: _react.PropTypes.string
+  provider: _propTypes2.default.string
 };
 
 var createNotSupportedComponent = exports.createNotSupportedComponent = function createNotSupportedComponent(message) {

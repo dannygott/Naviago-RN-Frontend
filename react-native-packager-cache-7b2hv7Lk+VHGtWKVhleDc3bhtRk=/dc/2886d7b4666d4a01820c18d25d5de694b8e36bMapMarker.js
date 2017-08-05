@@ -1,5 +1,9 @@
 var _jsxFileName = '/mnt/c/Users/Daniel/Naviago-RN-Frontend/node_modules/react-native-maps/lib/components/MapMarker.js';
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
+
 var _react = require('react');
 
 var _react2 = babelHelpers.interopRequireDefault(_react);
@@ -21,62 +25,62 @@ var viewConfig = {
   }
 };
 
-var propTypes = babelHelpers.extends({}, _reactNative.View.propTypes, {
-  identifier: _react.PropTypes.string,
-  reuseIdentifier: _react.PropTypes.string,
+var propTypes = babelHelpers.extends({}, _reactNative.ViewPropTypes, {
+  identifier: _propTypes2.default.string,
+  reuseIdentifier: _propTypes2.default.string,
 
-  title: _react.PropTypes.string,
+  title: _propTypes2.default.string,
 
-  description: _react.PropTypes.string,
+  description: _propTypes2.default.string,
 
-  image: _react.PropTypes.any,
+  image: _propTypes2.default.any,
 
-  opacity: _react.PropTypes.number,
+  opacity: _propTypes2.default.number,
 
-  pinColor: _react.PropTypes.string,
+  pinColor: _propTypes2.default.string,
 
-  coordinate: _react.PropTypes.shape({
-    latitude: _react.PropTypes.number.isRequired,
-    longitude: _react.PropTypes.number.isRequired
+  coordinate: _propTypes2.default.shape({
+    latitude: _propTypes2.default.number.isRequired,
+    longitude: _propTypes2.default.number.isRequired
   }).isRequired,
 
-  centerOffset: _react.PropTypes.shape({
-    x: _react.PropTypes.number.isRequired,
-    y: _react.PropTypes.number.isRequired
+  centerOffset: _propTypes2.default.shape({
+    x: _propTypes2.default.number.isRequired,
+    y: _propTypes2.default.number.isRequired
   }),
 
-  calloutOffset: _react.PropTypes.shape({
-    x: _react.PropTypes.number.isRequired,
-    y: _react.PropTypes.number.isRequired
+  calloutOffset: _propTypes2.default.shape({
+    x: _propTypes2.default.number.isRequired,
+    y: _propTypes2.default.number.isRequired
   }),
 
-  anchor: _react.PropTypes.shape({
-    x: _react.PropTypes.number.isRequired,
-    y: _react.PropTypes.number.isRequired
+  anchor: _propTypes2.default.shape({
+    x: _propTypes2.default.number.isRequired,
+    y: _propTypes2.default.number.isRequired
   }),
 
-  calloutAnchor: _react.PropTypes.shape({
-    x: _react.PropTypes.number.isRequired,
-    y: _react.PropTypes.number.isRequired
+  calloutAnchor: _propTypes2.default.shape({
+    x: _propTypes2.default.number.isRequired,
+    y: _propTypes2.default.number.isRequired
   }),
 
-  flat: _react.PropTypes.bool,
+  flat: _propTypes2.default.bool,
 
-  draggable: _react.PropTypes.bool,
+  draggable: _propTypes2.default.bool,
 
-  onPress: _react.PropTypes.func,
+  onPress: _propTypes2.default.func,
 
-  onSelect: _react.PropTypes.func,
+  onSelect: _propTypes2.default.func,
 
-  onDeselect: _react.PropTypes.func,
+  onDeselect: _propTypes2.default.func,
 
-  onCalloutPress: _react.PropTypes.func,
+  onCalloutPress: _propTypes2.default.func,
 
-  onDragStart: _react.PropTypes.func,
+  onDragStart: _propTypes2.default.func,
 
-  onDrag: _react.PropTypes.func,
+  onDrag: _propTypes2.default.func,
 
-  onDragEnd: _react.PropTypes.func
+  onDragEnd: _propTypes2.default.func
 });
 
 var defaultProps = {
@@ -154,7 +158,7 @@ var MapMarker = function (_React$Component) {
         style: [styles.marker, this.props.style],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 265
+          lineNumber: 266
         }
       }));
     }

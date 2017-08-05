@@ -2,31 +2,68 @@ import React, { Component } from 'react';
 import { Text, View, StyleSheet, TextInput } from 'react-native';
 import { Constants } from 'expo';
 
+
 export default class Search extends Component {
   render() {
     return (
-      <View style={styles.container}>
-          <TextInput
-                defaultValue = {"search"}
-                style={styles.searchText}
-            />
+      <View style = {styles.container}>
+        <View style={styles.topSearch}>
+            <TextInput
+                  inlineImageLeft = {"search.png"}
+                  defaultValue = {"Search"}
+                  style={styles.searchText}
+                  underlineColorAndroid = {"transparent"}
+              />
+        </View>        
+        <BottomSearch name = "jaun"/>
       </View>
+
     );
   }
 }
 
+
+class BottomSearch extends Component {
+  render() {
+    return (
+      <View style = {styles.bottomSearch}>
+          
+      </View>
+
+    );
+  }
+}
+
+
+
 const styles = StyleSheet.create({
-  container: {
+  topSearch: {
     marginTop:25,
-    position:"absolute",
+    position:"relative",
     flex: 0,
     alignSelf:'center',
-    height:"7%",
-    backgroundColor: '#4286f4',
+    height:"6%",
+    backgroundColor: '#22B473',
     width:"90%",
     borderBottomLeftRadius:7,
     borderBottomRightRadius:7,
     justifyContent:"center",
+    zIndex:100,
+  },
+  container: {
+    position:"absolute",
+    flex: 0,
+    width: "100%",
+    height: "100%",
+  },
+  bottomSearch:{
+    position:"relative",
+    flex: 0,
+    width: "90%",
+    height: "9%",
+    backgroundColor: "white",
+    zIndex:-1,
+    alignSelf:'center',
   },
   searchText:{
     alignSelf:"center",
@@ -35,3 +72,8 @@ const styles = StyleSheet.create({
     fontSize:20,
   }
 });
+
+
+
+
+

@@ -6,7 +6,7 @@
     "jest-expo": "~1.0.1",
     "react-native-scripts": "0.0.31",
     "react-test-renderer": "16.0.0-alpha.6",
-    "remote-redux-devtools": "^0.5.1"
+    "remote-redux-devtools": "^0.5.12"
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
@@ -23,7 +23,7 @@
     "expo": "^17.0.0",
     "react": "16.0.0-alpha.6",
     "react-native": "^0.44.3",
-    "react-native-maps": "^0.15.2",
+    "react-native-maps": "^0.15.3",
     "redux-thunk": "^2.2.0",
     "rnpm": "^1.9.0"
   }

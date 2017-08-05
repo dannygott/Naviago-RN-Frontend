@@ -1,72 +1,30 @@
+import returnTestData from "./testdata.js"
 
 export default function locationsPull(){
-    var jaundice ={ markers: [{
-                  title: "this.props.locations",
-                  coordinates: {
-                    latitude: 3.148561,
-                    longitude: 101.652778,},
-                  key: 22222222222222
-                },
-                {
-                  title: 'hello',
-                  coordinates: {
-                    latitude: 3.149771,
-                    longitude: 101.655449 },
-                  image:"./Flag-1.png",
-                  anchor: { x: 0, y: 1, },
-                  key : 11111111  
-                },
-                                {
-                  title: 'hello',
-                  coordinates: {
-                    latitude: 3.149771,
-                    longitude: 102.655449 },
-                  image:"./Flag-1.png",
-                  anchor: { x: 0, y: 1, },
-                  key : 11111111  
-                },
-                                {
-                  title: 'hello',
-                  coordinates: {
-                    latitude: 3.149771,
-                    longitude: 103.655449 },
-                  image:"./Flag-1.png",
-                  anchor: { x: 0, y: 1, },
-                  key : 11111111  
-                },
-                                {
-                  title: 'hello',
-                  coordinates: {
-                    latitude: 3.149771,
-                    longitude: 104.655449 },
-                  image:"./Flag-1.png",
-                  anchor: { x: 0, y: 1, },
-                  key : 11111111  
-                },
-                                {
-                  title: 'hello',
-                  coordinates: {
-                    latitude: 3.149771,
-                    longitude: 105.655449 },
-                  image:"./Flag-1.png",
-                  anchor: { x: 0, y: 1, },
-                  key : 11111111  
-                },
-                
-                
-                ],}
-    return jaundice
 
+  var testLocations = returnTestData() // grabs test data from external source
+  var locations = testLocations.results // simplifies test locations
+  var constructedLocation // var holds a constructed location to locations array to be pushed to map
+  var markerArray = []
 
+  for (i = 0; i < locations.length; i++){ // loops though all locations in array and converts them to mapable flags
+    
+    var location = locations[i]
 
-  /*
-    fetch('https://facebook.github.io/react-native/movies.json')
-      .then(function(response) {
-          return response.movies.json()
-       })
-      .catch((error) => {
-        console.error(error);
-      });
+    constructedLocation = { // location flag template
+            title: location.name,
+            coordinates: {
+              latitude: location.geometry.location.lat,
+              longitude: location.geometry.location.lng,},
+            icon: location.icon,
+            key: location.id
+    }
 
-*/
+    markerArray.push(constructedLocation) // pushes constructed flag to locations array
+  
+  }
+
+  var finalMarkerObj ={ markers: markerArray,} // wraps the locations array
+  return finalMarkerObj
+
 }

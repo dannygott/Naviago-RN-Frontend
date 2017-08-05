@@ -1,5 +1,9 @@
 var _jsxFileName = '/mnt/c/Users/Daniel/Naviago-RN-Frontend/node_modules/react-native-maps/lib/components/MapUrlTile.js';
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
+
 var _react = require('react');
 
 var _react2 = babelHelpers.interopRequireDefault(_react);
@@ -10,10 +14,10 @@ var _decorateMapComponent = require('./decorateMapComponent');
 
 var _decorateMapComponent2 = babelHelpers.interopRequireDefault(_decorateMapComponent);
 
-var propTypes = babelHelpers.extends({}, _reactNative.View.propTypes, {
-  urlTemplate: _react.PropTypes.string.isRequired,
+var propTypes = babelHelpers.extends({}, _reactNative.ViewPropTypes, {
+  urlTemplate: _propTypes2.default.string.isRequired,
 
-  zIndex: _react.PropTypes.number
+  zIndex: _propTypes2.default.number
 });
 
 var MapUrlTile = function (_React$Component) {
@@ -31,7 +35,7 @@ var MapUrlTile = function (_React$Component) {
       return _react2.default.createElement(AIRMapUrlTile, babelHelpers.extends({}, this.props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 36
         }
       }));
     }

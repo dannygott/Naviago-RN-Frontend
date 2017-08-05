@@ -1,5 +1,9 @@
 var _jsxFileName = '/mnt/c/Users/Daniel/Naviago-RN-Frontend/node_modules/react-native-maps/lib/components/MapView.js';
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = babelHelpers.interopRequireDefault(_propTypes);
+
 var _react = require('react');
 
 var _react2 = babelHelpers.interopRequireDefault(_react);
@@ -58,106 +62,106 @@ var viewConfig = {
   }
 };
 
-var propTypes = babelHelpers.extends({}, _reactNative.View.propTypes, {
-  provider: _react.PropTypes.oneOf(['google']),
+var propTypes = babelHelpers.extends({}, _reactNative.ViewPropTypes, {
+  provider: _propTypes2.default.oneOf(['google']),
 
-  style: _reactNative.View.propTypes.style,
+  style: _reactNative.ViewPropTypes.style,
 
-  customMapStyle: _react.PropTypes.array,
+  customMapStyle: _propTypes2.default.array,
 
-  customMapStyleString: _react.PropTypes.string,
+  customMapStyleString: _propTypes2.default.string,
 
-  showsUserLocation: _react.PropTypes.bool,
+  showsUserLocation: _propTypes2.default.bool,
 
-  userLocationAnnotationTitle: _react.PropTypes.string,
+  userLocationAnnotationTitle: _propTypes2.default.string,
 
-  showsMyLocationButton: _react.PropTypes.bool,
+  showsMyLocationButton: _propTypes2.default.bool,
 
-  followsUserLocation: _react.PropTypes.bool,
+  followsUserLocation: _propTypes2.default.bool,
 
-  showsPointsOfInterest: _react.PropTypes.bool,
+  showsPointsOfInterest: _propTypes2.default.bool,
 
-  showsCompass: _react.PropTypes.bool,
+  showsCompass: _propTypes2.default.bool,
 
-  zoomEnabled: _react.PropTypes.bool,
+  zoomEnabled: _propTypes2.default.bool,
 
-  rotateEnabled: _react.PropTypes.bool,
+  rotateEnabled: _propTypes2.default.bool,
 
-  cacheEnabled: _react.PropTypes.bool,
+  cacheEnabled: _propTypes2.default.bool,
 
-  loadingEnabled: _react.PropTypes.bool,
+  loadingEnabled: _propTypes2.default.bool,
 
   loadingBackgroundColor: _reactNative.ColorPropType,
 
   loadingIndicatorColor: _reactNative.ColorPropType,
 
-  scrollEnabled: _react.PropTypes.bool,
+  scrollEnabled: _propTypes2.default.bool,
 
-  pitchEnabled: _react.PropTypes.bool,
+  pitchEnabled: _propTypes2.default.bool,
 
-  toolbarEnabled: _react.PropTypes.bool,
+  toolbarEnabled: _propTypes2.default.bool,
 
-  moveOnMarkerPress: _react.PropTypes.bool,
+  moveOnMarkerPress: _propTypes2.default.bool,
 
-  showsScale: _react.PropTypes.bool,
+  showsScale: _propTypes2.default.bool,
 
-  showsBuildings: _react.PropTypes.bool,
+  showsBuildings: _propTypes2.default.bool,
 
-  showsTraffic: _react.PropTypes.bool,
+  showsTraffic: _propTypes2.default.bool,
 
-  showsIndoors: _react.PropTypes.bool,
+  showsIndoors: _propTypes2.default.bool,
 
-  showsIndoorLevelPicker: _react.PropTypes.bool,
+  showsIndoorLevelPicker: _propTypes2.default.bool,
 
-  mapType: _react.PropTypes.oneOf(Object.values(MAP_TYPES)),
+  mapType: _propTypes2.default.oneOf(Object.values(MAP_TYPES)),
 
-  region: _react.PropTypes.shape({
-    latitude: _react.PropTypes.number.isRequired,
-    longitude: _react.PropTypes.number.isRequired,
+  region: _propTypes2.default.shape({
+    latitude: _propTypes2.default.number.isRequired,
+    longitude: _propTypes2.default.number.isRequired,
 
-    latitudeDelta: _react.PropTypes.number.isRequired,
-    longitudeDelta: _react.PropTypes.number.isRequired
+    latitudeDelta: _propTypes2.default.number.isRequired,
+    longitudeDelta: _propTypes2.default.number.isRequired
   }),
 
-  initialRegion: _react.PropTypes.shape({
-    latitude: _react.PropTypes.number.isRequired,
-    longitude: _react.PropTypes.number.isRequired,
+  initialRegion: _propTypes2.default.shape({
+    latitude: _propTypes2.default.number.isRequired,
+    longitude: _propTypes2.default.number.isRequired,
 
-    latitudeDelta: _react.PropTypes.number.isRequired,
-    longitudeDelta: _react.PropTypes.number.isRequired
+    latitudeDelta: _propTypes2.default.number.isRequired,
+    longitudeDelta: _propTypes2.default.number.isRequired
   }),
 
-  liteMode: _react.PropTypes.bool,
+  liteMode: _propTypes2.default.bool,
 
-  maxDelta: _react.PropTypes.number,
+  maxDelta: _propTypes2.default.number,
 
-  minDelta: _react.PropTypes.number,
+  minDelta: _propTypes2.default.number,
 
   legalLabelInsets: _reactNative.EdgeInsetsPropType,
 
-  onRegionChange: _react.PropTypes.func,
+  onRegionChange: _propTypes2.default.func,
 
-  onRegionChangeComplete: _react.PropTypes.func,
+  onRegionChangeComplete: _propTypes2.default.func,
 
-  onPress: _react.PropTypes.func,
+  onPress: _propTypes2.default.func,
 
-  onLongPress: _react.PropTypes.func,
+  onLongPress: _propTypes2.default.func,
 
-  onPanDrag: _react.PropTypes.func,
+  onPanDrag: _propTypes2.default.func,
 
-  onMarkerPress: _react.PropTypes.func,
+  onMarkerPress: _propTypes2.default.func,
 
-  onMarkerSelect: _react.PropTypes.func,
+  onMarkerSelect: _propTypes2.default.func,
 
-  onMarkerDeselect: _react.PropTypes.func,
+  onMarkerDeselect: _propTypes2.default.func,
 
-  onCalloutPress: _react.PropTypes.func,
+  onCalloutPress: _propTypes2.default.func,
 
-  onMarkerDragStart: _react.PropTypes.func,
+  onMarkerDragStart: _propTypes2.default.func,
 
-  onMarkerDrag: _react.PropTypes.func,
+  onMarkerDrag: _propTypes2.default.func,
 
-  onMarkerDragEnd: _react.PropTypes.func
+  onMarkerDragEnd: _propTypes2.default.func
 
 });
 
@@ -397,7 +401,7 @@ var MapView = function (_React$Component) {
         }, props, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 630
+            lineNumber: 631
           }
         }));
       }
@@ -411,7 +415,7 @@ var MapView = function (_React$Component) {
       }, props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 640
+          lineNumber: 641
         }
       }));
     }
@@ -461,7 +465,7 @@ MapView.Circle = _MapCircle2.default;
 MapView.UrlTile = _MapUrlTile2.default;
 MapView.Callout = _MapCallout2.default;
 babelHelpers.extends(MapView, ProviderConstants);
-MapView.ProviderPropType = _react.PropTypes.oneOf(Object.values(ProviderConstants));
+MapView.ProviderPropType = _propTypes2.default.oneOf(Object.values(ProviderConstants));
 
 MapView.Animated = _reactNative.Animated.createAnimatedComponent(MapView);
 MapView.AnimatedRegion = _AnimatedRegion2.default;

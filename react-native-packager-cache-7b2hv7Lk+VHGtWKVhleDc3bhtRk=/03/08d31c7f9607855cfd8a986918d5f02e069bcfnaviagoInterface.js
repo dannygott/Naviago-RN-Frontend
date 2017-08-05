@@ -2,53 +2,34 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = locationsPull;
+
+var _testdata = require("./testdata.js");
+
+var _testdata2 = babelHelpers.interopRequireDefault(_testdata);
+
 function locationsPull() {
-  var jaundice = { markers: [{
-      title: "this.props.locations",
+
+  var testLocations = (0, _testdata2.default)();
+  var locations = testLocations.results;
+  var constructedLocation;
+  var markerArray = [];
+
+  for (i = 0; i < locations.length; i++) {
+
+    var location = locations[i];
+
+    constructedLocation = {
+      title: location.name,
       coordinates: {
-        latitude: 3.148561,
-        longitude: 101.652778 },
-      key: 22222222222222
-    }, {
-      title: 'hello',
-      coordinates: {
-        latitude: 3.149771,
-        longitude: 101.655449 },
-      image: "./Flag-1.png",
-      anchor: { x: 0, y: 1 },
-      key: 11111111
-    }, {
-      title: 'hello',
-      coordinates: {
-        latitude: 3.149771,
-        longitude: 102.655449 },
-      image: "./Flag-1.png",
-      anchor: { x: 0, y: 1 },
-      key: 11111111
-    }, {
-      title: 'hello',
-      coordinates: {
-        latitude: 3.149771,
-        longitude: 103.655449 },
-      image: "./Flag-1.png",
-      anchor: { x: 0, y: 1 },
-      key: 11111111
-    }, {
-      title: 'hello',
-      coordinates: {
-        latitude: 3.149771,
-        longitude: 104.655449 },
-      image: "./Flag-1.png",
-      anchor: { x: 0, y: 1 },
-      key: 11111111
-    }, {
-      title: 'hello',
-      coordinates: {
-        latitude: 3.149771,
-        longitude: 105.655449 },
-      image: "./Flag-1.png",
-      anchor: { x: 0, y: 1 },
-      key: 11111111
-    }] };
-  return jaundice;
+        latitude: location.geometry.location.lat,
+        longitude: location.geometry.location.lng },
+      icon: location.icon,
+      key: location.id
+    };
+
+    markerArray.push(constructedLocation);
+  }
+
+  var finalMarkerObj = { markers: markerArray };
+  return finalMarkerObj;
 }

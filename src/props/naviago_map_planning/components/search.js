@@ -24,7 +24,7 @@ export default class Search extends Component {
                   defaultValue = {"Search"}
                   style={styles.searchText}
                   underlineColorAndroid = {"transparent"}
-                  onSelectionChange = {() => {this.setState({isSearchActive : true})}}
+                  onSelectionChange = {(main) => {this.setState({isSearchActive : true}); console.log(main.nativeEvent)}}
                   onChangeText = {(text) => {this.setState({text})
                   console.log(this.state)}}
               />

@@ -34,14 +34,14 @@ var Search = function (_Component) {
         _reactNative.View,
         { style: styles.container, __source: {
             fileName: _jsxFileName,
-            lineNumber: 23
+            lineNumber: 20
           }
         },
         _react2.default.createElement(
           _reactNative.View,
           { style: styles.topSearch, __source: {
               fileName: _jsxFileName,
-              lineNumber: 24
+              lineNumber: 21
             }
           },
           _react2.default.createElement(_reactNative.TextInput, {
@@ -49,8 +49,8 @@ var Search = function (_Component) {
             defaultValue: "Search",
             style: styles.searchText,
             underlineColorAndroid: "transparent",
-            onSelectionChange: function onSelectionChange() {
-              _this2.setState({ isSearchActive: true });
+            onSelectionChange: function onSelectionChange(main) {
+              _this2.setState({ isSearchActive: true });console.log(main.nativeEvent);
             },
             onChangeText: function onChangeText(text) {
               _this2.setState({ text: text });
@@ -58,13 +58,13 @@ var Search = function (_Component) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 25
+              lineNumber: 22
             }
           })
         ),
         _react2.default.createElement(BottomSearch, { name: 'jaun', __source: {
             fileName: _jsxFileName,
-            lineNumber: 35
+            lineNumber: 32
           }
         })
       );
@@ -97,7 +97,7 @@ var BottomSearch = function (_Component2) {
           }
         }, __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 43
         }
       });
     }

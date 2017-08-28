@@ -15,26 +15,33 @@ var _expo = require('expo');
 var Search = function (_Component) {
   babelHelpers.inherits(Search, _Component);
 
-  function Search() {
+  function Search(props) {
     babelHelpers.classCallCheck(this, Search);
-    return babelHelpers.possibleConstructorReturn(this, (Search.__proto__ || Object.getPrototypeOf(Search)).apply(this, arguments));
+
+    var _this = babelHelpers.possibleConstructorReturn(this, (Search.__proto__ || Object.getPrototypeOf(Search)).call(this, props));
+
+    _this.state = { isSearchActive: false, searchValue: false, text: "jaun" };
+
+    return _this;
   }
 
   babelHelpers.createClass(Search, [{
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
       return _react2.default.createElement(
         _reactNative.View,
         { style: styles.container, __source: {
             fileName: _jsxFileName,
-            lineNumber: 9
+            lineNumber: 23
           }
         },
         _react2.default.createElement(
           _reactNative.View,
           { style: styles.topSearch, __source: {
               fileName: _jsxFileName,
-              lineNumber: 10
+              lineNumber: 24
             }
           },
           _react2.default.createElement(_reactNative.TextInput, {
@@ -42,15 +49,22 @@ var Search = function (_Component) {
             defaultValue: "Search",
             style: styles.searchText,
             underlineColorAndroid: "transparent",
+            onSelectionChange: function onSelectionChange() {
+              _this2.setState({ isSearchActive: true });
+            },
+            onChangeText: function onChangeText(text) {
+              _this2.setState({ text: text });
+              console.log(_this2.state);
+            },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 11
+              lineNumber: 25
             }
           })
         ),
         _react2.default.createElement(BottomSearch, { name: 'jaun', __source: {
             fileName: _jsxFileName,
-            lineNumber: 18
+            lineNumber: 35
           }
         })
       );
@@ -72,9 +86,18 @@ var BottomSearch = function (_Component2) {
   babelHelpers.createClass(BottomSearch, [{
     key: 'render',
     value: function render() {
-      return _react2.default.createElement(_reactNative.View, { style: styles.bottomSearch, __source: {
+      var _this4 = this;
+
+      return _react2.default.createElement(_reactNative.Animated.View, { style: styles.bottomSearch,
+        componentDidMount: function componentDidMount() {
+          console.log("jaunsk");
+          if (_this4.state.isSearchActive == true) {
+            _reactNative.Animated.timing(_this4.state.fadeAnim, {
+              toValue: 1 }).start();
+          }
+        }, __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 46
         }
       });
     }
@@ -109,7 +132,8 @@ var styles = _reactNative.StyleSheet.create({
     height: "9%",
     backgroundColor: "white",
     zIndex: -1,
-    alignSelf: 'center'
+    alignSelf: 'center',
+    opacity: 0
   },
   searchText: {
     alignSelf: "center",

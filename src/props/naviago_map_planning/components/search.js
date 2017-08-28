@@ -1,10 +1,21 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, TextInput } from 'react-native';
+import { Text, View, StyleSheet, TextInput, Animated } from 'react-native';
 import { Constants } from 'expo';
 
 
 export default class Search extends Component {
+
+
+
+
+  constructor(props) {
+    super(props);
+    this.state = { isSearchActive : false, searchValue : false, text: "jaun", } 
+
+  }
+
   render() {
+
     return (
       <View style = {styles.container}>
         <View style={styles.topSearch}>
@@ -13,6 +24,9 @@ export default class Search extends Component {
                   defaultValue = {"Search"}
                   style={styles.searchText}
                   underlineColorAndroid = {"transparent"}
+                  onSelectionChange = {() => {this.setState({isSearchActive : true})}}
+                  onChangeText = {(text) => {this.setState({text})
+                  console.log(this.state)}}
               />
         </View>        
         <BottomSearch name = "jaun"/>
@@ -26,9 +40,17 @@ export default class Search extends Component {
 class BottomSearch extends Component {
   render() {
     return (
-      <View style = {styles.bottomSearch}>
-          
-      </View>
+      <Animated.View style = {styles.bottomSearch}
+      componentDidMount = {()=> {   
+        console.log("jaunsk"); 
+        if (this.state.isSearchActive == true){
+          Animated.timing(                            // Animate value over time
+            this.state.fadeAnim,                      // The value to drive
+            {
+              toValue: 1,                             // Animate to final value of 1
+            }
+          ).start(); }}}>    
+      </Animated.View>
 
     );
   }
@@ -64,6 +86,7 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     zIndex:-1,
     alignSelf:'center',
+    opacity: 0,
   },
   searchText:{
     alignSelf:"center",

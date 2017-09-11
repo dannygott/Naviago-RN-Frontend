@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
-import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
+import {StyleSheet, View, Text, TouchableOpacity, ScrollView, Image} from 'react-native';
 import MapView from 'react-native-maps';
+import PopupDialog, { SlideAnimation, DialogTitle } from 'react-native-popup-dialog';
+var stylesGlobal = require("./stylesGlobal.js")
 
 const styles = StyleSheet.create({
   button: {
@@ -16,10 +18,13 @@ const styles = StyleSheet.create({
 
 
 
+
 export default class Counter extends Component {
     constructor(props) {
       super(props);
         this.state = {
+                  tagSelected : false,
+                  infoShown : false,
                   markers: [{
                     title: "hello",
                     coordinates: {
@@ -40,7 +45,7 @@ export default class Counter extends Component {
     }
     
     _updateMaps(){
-      if(this.props.locations.markers[0] != undefined) {this.setState(this.props.locations)}
+      if(this.props.locations.markers[0] != undefined) {this.setState(this.props.locations); }
     }
 
 
@@ -66,7 +71,7 @@ export default class Counter extends Component {
                   latitudeDelta: 0.0922,
                   longitudeDelta: 0.0421,
             }}
-            onRegionChangeComplete = {this._updateMaps.bind(this)}
+            
 
           >
 
@@ -76,30 +81,47 @@ export default class Counter extends Component {
                   coordinate={marker.coordinates}
                   title={marker.title}
                   anchor = {marker.anchor}
+                  
+                  onPress={() =>{ 
+                                  console.log("jaun")  
+                                  
+                                  this._updateMaps.bind(this) 
+                                  this.popupDialog.show();
+
+                                  }
+                                  }
                   />
               ))}
           </MapView>
+          <PopupDialog
+            dialogTitle={<DialogTitle title="Jaun Bitch Park" />}
+            ref={(popupDialog) => { this.popupDialog = popupDialog; }}
+            dialogAnimation = { new SlideAnimation({ slideFrom: 'bottom' }) }
+            dialogStyle = {{height:"70%", width:"90%"}}
+            overlayBackgroundColor = {"rgba(108, 52, 199, 0)"}
+            dismissOnTouchOutside = {"True"}
+              >
+
+        <View>
+        <ScrollView>
+
+          <Image style={stylesGlobal.locationImage} source={require('./tempLocPic-1.jpg')} />
+          <View style={[stylesGlobal.starContainer, stylesGlobal.inlineContainer]}>
+            <Image style={[stylesGlobal.star, stylesGlobal.inlineContent]} source={require('./star-1.png')}/>
+            <Image style={[stylesGlobal.star, stylesGlobal.inlineContent]} source={require('./star-1.png')}/>
+            <Image style={[stylesGlobal.star, stylesGlobal.inlineContent]} source={require('./star-1.png')}/>
+            <Image style={[stylesGlobal.star, stylesGlobal.inlineContent]} source={require('./star-1.png')}/>
+            <Image style={[stylesGlobal.star, stylesGlobal.inlineContent]} source={require('./star-1.png')}/>
+            <Text style={stylesGlobal.inlineContent}>(5/5)</Text>
+          </View>
+          <Text style = {{margin: 10,}}>
+            {this.state.tagSelected.description}
+          </Text>
+          </ScrollView>
+        </View>
+      </PopupDialog>
 
 
-
-
-
-
-
-
-
-
-
-          <Text>{counter}</Text>
-          <TouchableOpacity onPress={increment} style={styles.button}>
-            <Text>up</Text>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={decrement} style={styles.button}>
-            <Text>down</Text>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={map_pull} style={styles.button}>
-            <Text>UPDATE MAP</Text>
-          </TouchableOpacity>
         </View>
       );
     }

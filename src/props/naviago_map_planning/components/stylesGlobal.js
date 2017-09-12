@@ -39,7 +39,6 @@ module.exports = StyleSheet.create({
 
       inlineContainer: {
           flexWrap: 'wrap',
-          alignItems: 'flex-start',
           flexDirection:'row',
       },
 

@@ -100,8 +100,8 @@ var Counter = function (_Component) {
 
             },
             initialRegion: {
-              latitude: 37.78825,
-              longitude: -122.4324,
+              latitude: 3.149771,
+              longitude: 101.655449,
               latitudeDelta: 0.0922,
               longitudeDelta: 0.0421
             },
@@ -136,7 +136,7 @@ var Counter = function (_Component) {
           {
             dialogTitle: _react2.default.createElement(_reactNativePopupDialog.DialogTitle, { title: 'Jaun Bitch Park', __source: {
                 fileName: _jsxFileName,
-                lineNumber: 97
+                lineNumber: 98
               }
             }),
             ref: function ref(popupDialog) {
@@ -148,7 +148,7 @@ var Counter = function (_Component) {
             dismissOnTouchOutside: "True",
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 96
+              lineNumber: 97
             }
           },
           _react2.default.createElement(
@@ -156,7 +156,7 @@ var Counter = function (_Component) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 105
+                lineNumber: 106
               }
             },
             _react2.default.createElement(
@@ -164,26 +164,21 @@ var Counter = function (_Component) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 106
+                  lineNumber: 107
                 }
               },
               _react2.default.createElement(_reactNative.Image, { style: stylesGlobal.locationImage, source: require('./tempLocPic-1.jpg'), __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 108
+                  lineNumber: 109
                 }
               }),
               _react2.default.createElement(
                 _reactNative.View,
                 { style: [stylesGlobal.starContainer, stylesGlobal.inlineContainer], __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 109
-                  }
-                },
-                _react2.default.createElement(_reactNative.Image, { style: [stylesGlobal.star, stylesGlobal.inlineContent], source: require('./star-1.png'), __source: {
-                    fileName: _jsxFileName,
                     lineNumber: 110
                   }
-                }),
+                },
                 _react2.default.createElement(_reactNative.Image, { style: [stylesGlobal.star, stylesGlobal.inlineContent], source: require('./star-1.png'), __source: {
                     fileName: _jsxFileName,
                     lineNumber: 111
@@ -204,11 +199,16 @@ var Counter = function (_Component) {
                     lineNumber: 114
                   }
                 }),
+                _react2.default.createElement(_reactNative.Image, { style: [stylesGlobal.star, stylesGlobal.inlineContent], source: require('./star-1.png'), __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 115
+                  }
+                }),
                 _react2.default.createElement(
                   _reactNative.Text,
                   { style: stylesGlobal.inlineContent, __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 115
+                      lineNumber: 116
                     }
                   },
                   '(5/5)'
@@ -218,7 +218,7 @@ var Counter = function (_Component) {
                 _reactNative.Text,
                 { style: { margin: 10 }, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 117
+                    lineNumber: 118
                   }
                 },
                 this.state.tagSelected.description

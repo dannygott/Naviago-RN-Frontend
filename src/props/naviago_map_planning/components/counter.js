@@ -93,6 +93,7 @@ export default class Counter extends Component {
                   />
               ))}
           </MapView>
+          
           <PopupDialog
             dialogTitle={<DialogTitle title="Jaun Bitch Park" />}
             ref={(popupDialog) => { this.popupDialog = popupDialog; }}

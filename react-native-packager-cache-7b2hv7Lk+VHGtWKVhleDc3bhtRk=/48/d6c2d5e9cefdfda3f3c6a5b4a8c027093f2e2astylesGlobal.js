@@ -36,7 +36,6 @@ module.exports = _reactNative.StyleSheet.create({
 
       inlineContainer: {
             flexWrap: 'wrap',
-            alignItems: 'flex-start',
             flexDirection: 'row'
       },
 
@@ -45,14 +44,16 @@ module.exports = _reactNative.StyleSheet.create({
       },
 
       locationImage: {
-            flex: 0,
-            width: "100%",
-            height: "50%"
+            flex: 1,
+            flexDirection: "row",
+            flexWrap: "wrap",
+            alignSelf: "center"
       },
 
       dayContainer: {
             width: 100,
             backgroundColor: "rgb(210, 34, 122)"
+
       },
 
       starContainer: {

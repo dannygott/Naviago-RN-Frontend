@@ -51,12 +51,16 @@ module.exports = StyleSheet.create({
 
 
       locationImage:{
-        width : "50%"
+        flex : 1,        
+        flexDirection:"row",
+        flexWrap:"wrap",
+        alignSelf:"center",
       },
 
       dayContainer:{
         width:100,
         backgroundColor:"rgb(210, 34, 122)",
+
       },
 
       starContainer:{

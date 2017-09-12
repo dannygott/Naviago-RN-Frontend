@@ -24,6 +24,7 @@
     "react": "16.0.0-alpha.6",
     "react-native": "^0.44.3",
     "react-native-maps": "^0.15.3",
+    "react-native-popup-dialog": "^0.9.35",
     "redux-thunk": "^2.2.0",
     "rnpm": "^1.9.0"
   }

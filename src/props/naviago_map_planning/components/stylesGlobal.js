@@ -50,10 +50,10 @@ module.exports = StyleSheet.create({
 
 
       locationImage:{
-        flex : 1,        
-        flexDirection:"row",
-        flexWrap:"wrap",
-        alignSelf:"center",
+        flex : 0, 
+        width : "100%",
+        height : "100%",       
+
       },
 
       dayContainer:{

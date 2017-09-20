@@ -49,6 +49,8 @@ function counter() {
         count: state.count - 100,
         locations: (0, _naviagoInterface2.default)()
       });
+    case types.LOCATION_ADD:
+      return babelHelpers.extends({}, state);
     default:
       return state;
   }

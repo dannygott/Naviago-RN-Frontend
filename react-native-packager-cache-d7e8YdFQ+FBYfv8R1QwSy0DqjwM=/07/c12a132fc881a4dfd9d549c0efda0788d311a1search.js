@@ -34,14 +34,14 @@ var Search = function (_Component) {
         _reactNative.View,
         { style: styles.container, __source: {
             fileName: _jsxFileName,
-            lineNumber: 20
+            lineNumber: 17
           }
         },
         _react2.default.createElement(
           _reactNative.View,
           { style: styles.topSearch, __source: {
               fileName: _jsxFileName,
-              lineNumber: 21
+              lineNumber: 18
             }
           },
           _react2.default.createElement(_reactNative.TextInput, {
@@ -58,13 +58,13 @@ var Search = function (_Component) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 22
+              lineNumber: 19
             }
           })
         ),
         _react2.default.createElement(BottomSearch, { name: 'jaun', __source: {
             fileName: _jsxFileName,
-            lineNumber: 32
+            lineNumber: 29
           }
         })
       );
@@ -97,7 +97,7 @@ var BottomSearch = function (_Component2) {
           }
         }, __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 40
         }
       });
     }

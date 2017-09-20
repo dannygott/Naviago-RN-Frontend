@@ -68,6 +68,7 @@ var Counter = function (_Component) {
       if (this.props.locations.markers[0] != undefined) {
         this.setState(this.props.locations);
       }
+      console.log(this.props.locations);
     }
   }, {
     key: 'render',
@@ -79,13 +80,14 @@ var Counter = function (_Component) {
           increment = _props.increment,
           decrement = _props.decrement,
           map_pull = _props.map_pull,
-          locations = _props.locations;
+          locations = _props.locations,
+          location_add = _props.location_add;
 
       return _react2.default.createElement(
         _reactNative.View,
         { style: { flex: 1, alignItems: 'center', justifyContent: 'center' }, __source: {
             fileName: _jsxFileName,
-            lineNumber: 56
+            lineNumber: 57
           }
         },
         _react2.default.createElement(
@@ -108,7 +110,7 @@ var Counter = function (_Component) {
 
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 59
+              lineNumber: 60
             }
           },
           this.state.markers.map(function (marker) {
@@ -117,26 +119,37 @@ var Counter = function (_Component) {
               coordinate: marker.coordinates,
               title: marker.title,
               anchor: marker.anchor,
-
+              onCalloutPress: map_pull,
               onPress: function onPress() {
-                console.log("jaun");
 
-                _this2._updateMaps.bind(_this2);
-                _this2.popupDialog.show();
+                _this2.setState({ "tagSelected": marker }, function () {
+                  _this2.popupDialog.show();
+                  console.log(_this2.state);
+                });
               },
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 79
+                lineNumber: 80
               }
             });
           })
         ),
         _react2.default.createElement(
+          _reactNative.Text,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 98
+            }
+          },
+          counter
+        ),
+        _react2.default.createElement(
           _reactNativePopupDialog2.default,
           {
-            dialogTitle: _react2.default.createElement(_reactNativePopupDialog.DialogTitle, { title: 'Jaun Bitch Park', __source: {
+            dialogTitle: _react2.default.createElement(_reactNativePopupDialog.DialogTitle, { title: this.state.tagSelected.title, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 97
+                lineNumber: 101
               }
             }),
             ref: function ref(popupDialog) {
@@ -148,7 +161,7 @@ var Counter = function (_Component) {
             dismissOnTouchOutside: "True",
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 96
+              lineNumber: 100
             }
           },
           _react2.default.createElement(
@@ -156,7 +169,7 @@ var Counter = function (_Component) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 105
+                lineNumber: 109
               }
             },
             _react2.default.createElement(
@@ -164,51 +177,63 @@ var Counter = function (_Component) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 106
+                  lineNumber: 110
                 }
               },
-              _react2.default.createElement(_reactNative.Image, { style: stylesGlobal.locationImage, source: require('./tempLocPic-1.jpg'), __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 108
-                }
-              }),
+              _react2.default.createElement(
+                _reactNative.View,
+                { style: {
+                    flex: 0,
+                    width: "100%",
+                    height: 200
+                  }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 111
+                  }
+                },
+                _react2.default.createElement(_reactNative.Image, { style: stylesGlobal.locationImage, source: require('./tempLocPic-1.jpg'), __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 116
+                  }
+                })
+              ),
               _react2.default.createElement(
                 _reactNative.View,
                 { style: [stylesGlobal.starContainer, stylesGlobal.inlineContainer], __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 109
+                    lineNumber: 118
                   }
                 },
                 _react2.default.createElement(_reactNative.Image, { style: [stylesGlobal.star, stylesGlobal.inlineContent], source: require('./star-1.png'), __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 110
+                    lineNumber: 119
                   }
                 }),
                 _react2.default.createElement(_reactNative.Image, { style: [stylesGlobal.star, stylesGlobal.inlineContent], source: require('./star-1.png'), __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 111
+                    lineNumber: 120
                   }
                 }),
                 _react2.default.createElement(_reactNative.Image, { style: [stylesGlobal.star, stylesGlobal.inlineContent], source: require('./star-1.png'), __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 112
+                    lineNumber: 121
                   }
                 }),
                 _react2.default.createElement(_reactNative.Image, { style: [stylesGlobal.star, stylesGlobal.inlineContent], source: require('./star-1.png'), __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 113
+                    lineNumber: 122
                   }
                 }),
                 _react2.default.createElement(_reactNative.Image, { style: [stylesGlobal.star, stylesGlobal.inlineContent], source: require('./star-1.png'), __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 114
+                    lineNumber: 123
                   }
                 }),
                 _react2.default.createElement(
                   _reactNative.Text,
                   { style: stylesGlobal.inlineContent, __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 115
+                      lineNumber: 124
                     }
                   },
                   '(5/5)'
@@ -218,11 +243,16 @@ var Counter = function (_Component) {
                 _reactNative.Text,
                 { style: { margin: 10 }, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 117
+                    lineNumber: 126
                   }
                 },
-                this.state.tagSelected.description
-              )
+                'This park is somewhere cool and ya'
+              ),
+              _react2.default.createElement(_reactNative.Button, { title: "Add This", onPress: this._updateMaps.bind(this), __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 129
+                }
+              })
             )
           )
         )

@@ -17,3 +17,8 @@ export function map_pull() {
     type : types.MAP_PULL,
   }
 }
+export function location_add() {
+  return {
+    type : types.LOCATION_ADD,
+  }
+}

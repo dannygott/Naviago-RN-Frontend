@@ -40,6 +40,11 @@ export default function counter(state = initialState, action = {}) {
         count: state.count - 100,
         locations : locationsPull()
       };
+    case types.LOCATION_ADD:
+    return{
+        ...state,
+        
+    }
     default:
       return state;
   }

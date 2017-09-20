@@ -5,9 +5,6 @@ import { Constants } from 'expo';
 
 export default class Search extends Component {
 
-
-
-
   constructor(props) {
     super(props);
     this.state = { isSearchActive : false, searchValue : false, text: "jaun", } 

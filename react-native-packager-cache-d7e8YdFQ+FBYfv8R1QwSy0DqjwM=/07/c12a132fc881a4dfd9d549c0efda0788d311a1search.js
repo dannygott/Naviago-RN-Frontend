@@ -113,7 +113,7 @@ var styles = _reactNative.StyleSheet.create({
     alignSelf: 'center',
     height: "6%",
     backgroundColor: '#22B473',
-    width: "90%",
+    width: "95%",
     borderBottomLeftRadius: 7,
     borderBottomRightRadius: 7,
     justifyContent: "center",

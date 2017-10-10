@@ -43,7 +43,7 @@ export default function counter(state = initialState, action = {}) {
     case types.LOCATION_ADD:
     return{
         ...state,
-        
+
     }
     default:
       return state;

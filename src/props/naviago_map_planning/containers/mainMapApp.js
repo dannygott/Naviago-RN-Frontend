@@ -2,7 +2,7 @@
 
 import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
-import Counter from '../components/counter';
+import Counter from '../components/mainMap';
 import * as counterActions from '../actions/counterActions';
 import { connect } from 'react-redux';
 

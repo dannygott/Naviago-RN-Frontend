@@ -20,9 +20,9 @@ var _reducers = require('../reducers');
 
 var reducers = babelHelpers.interopRequireWildcard(_reducers);
 
-var _counterApp = require('./counterApp');
+var _mainMapApp = require('./mainMapApp');
 
-var _counterApp2 = babelHelpers.interopRequireDefault(_counterApp);
+var _mainMapApp2 = babelHelpers.interopRequireDefault(_mainMapApp);
 
 var createStoreWithMiddleware = (0, _redux.applyMiddleware)(_reduxThunk2.default)(_redux.createStore);
 var reducer = (0, _redux.combineReducers)(reducers);
@@ -46,7 +46,7 @@ var App = function (_Component) {
             lineNumber: 16
           }
         },
-        _react2.default.createElement(_counterApp2.default, {
+        _react2.default.createElement(_mainMapApp2.default, {
           __source: {
             fileName: _jsxFileName,
             lineNumber: 17

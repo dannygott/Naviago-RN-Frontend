@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var _jsxFileName = '/mnt/c/Users/Sarah-Create/Naviago-RN-Frontend/src/props/naviago_map_planning/containers/counterApp.js';
+var _jsxFileName = '/mnt/c/Users/Sarah-Create/Naviago-RN-Frontend/src/props/naviago_map_planning/containers/mainMapApp.js';
 
 var _react = require('react');
 
@@ -11,9 +11,9 @@ var _react2 = babelHelpers.interopRequireDefault(_react);
 
 var _redux = require('redux');
 
-var _counter = require('../components/counter');
+var _mainMap = require('../components/mainMap');
 
-var _counter2 = babelHelpers.interopRequireDefault(_counter);
+var _mainMap2 = babelHelpers.interopRequireDefault(_mainMap);
 
 var _counterActions = require('../actions/counterActions');
 
@@ -36,7 +36,7 @@ var CounterApp = function (_Component) {
           state = _props.state,
           actions = _props.actions;
 
-      return _react2.default.createElement(_counter2.default, babelHelpers.extends({
+      return _react2.default.createElement(_mainMap2.default, babelHelpers.extends({
         counter: state.count,
         locations: state.locations
       }, actions, {

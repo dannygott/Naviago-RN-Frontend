@@ -2,7 +2,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = undefined;
-var _jsxFileName = '/mnt/c/Users/Sarah-Create/Naviago-RN-Frontend/src/props/naviago_map_planning/components/counter.js';
+var _jsxFileName = '/mnt/c/Users/Sarah-Create/Naviago-RN-Frontend/src/props/naviago_map_planning/components/mainMap.js';
 
 var _react = require('react');
 
@@ -156,7 +156,7 @@ var Counter = function (_Component) {
               _this2.popupDialog = popupDialog;
             },
             dialogAnimation: new _reactNativePopupDialog.SlideAnimation({ slideFrom: 'bottom' }),
-            dialogStyle: { height: "70%", width: "90%" },
+            dialogStyle: { height: "70%", width: "95%" },
             overlayBackgroundColor: "rgba(108, 52, 199, 0)",
             dismissOnTouchOutside: "True",
             __source: {
@@ -166,16 +166,14 @@ var Counter = function (_Component) {
           },
           _react2.default.createElement(
             _reactNative.View,
-            {
-              __source: {
+            { style: { flex: 1 }, __source: {
                 fileName: _jsxFileName,
                 lineNumber: 109
               }
             },
             _react2.default.createElement(
               _reactNative.ScrollView,
-              {
-                __source: {
+              { style: { flex: 1 }, __source: {
                   fileName: _jsxFileName,
                   lineNumber: 110
                 }
@@ -246,14 +244,14 @@ var Counter = function (_Component) {
                     lineNumber: 126
                   }
                 },
-                'This park is somewhere cool and ya'
-              ),
-              _react2.default.createElement(_reactNative.Button, { title: "Add This", onPress: this._updateMaps.bind(this), __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 129
-                }
-              })
-            )
+                this.state.tagSelected.key
+              )
+            ),
+            _react2.default.createElement(_reactNative.Button, { style: { width: "20%" }, title: "Add This", onPress: this._updateMaps.bind(this), __source: {
+                fileName: _jsxFileName,
+                lineNumber: 131
+              }
+            })
           )
         )
       );
